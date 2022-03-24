@@ -1,5 +1,5 @@
 import Todolist from "./components/Todolist";
-
+import Ajoutertache from "./components/ajouterTache"
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
     <div className="App">
 
       <Todolist />
+      <Ajoutertache />
     </div>
   );
 }

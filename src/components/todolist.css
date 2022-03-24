@@ -1,0 +1,34 @@
+
+.divApp {
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.sousdiv {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1 {
+    color:red;
+}
+
+.tache1, .tache2,.tache3 {
+    border: 1px solid black;
+    width:350px;
+    padding:20px;
+}
+
+.divtaches {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
