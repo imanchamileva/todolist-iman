@@ -1,5 +1,6 @@
-import Todolist from "./components/Todolist";
-import Ajoutertache from "./components/ajouterTache"
+import Todoform from "./components/Todoform";
+import Addtask from "./components/Addtask"
+import Tasklist from "./components/Tasklist";
 
 function App() {
   return (
@@ -7,8 +8,9 @@ function App() {
 
     <div className="App">
 
-      <Todolist />
-      <Ajoutertache />
+      <Todoform/>
+      
+      {/* <Addtask /> */}
     </div>
   );
 }

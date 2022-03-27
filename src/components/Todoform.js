@@ -1,17 +1,20 @@
 import style from "./todolist.css"
 import {useState} from "react"
+import PropTypes from 'prop-types'
+import Tasklist from "./Tasklist"
 
 
+function Todoform() {
 
-function Todolist(props) {
-
-    const {nom, description, priorite, isFinish} = props
+    
+    const[tasks, setTasks] = useState([])
 
     const [name, setNom] = useState('')
     const [desc, setDesc] = useState('')
     const [priority, setPriority] = useState('normal')
-    // const [isfinished, setIsFinished] = useState('')
+  
 
+ 
 
     const handleNom = (e) => {
 
@@ -31,17 +34,32 @@ function Todolist(props) {
 
         const handleAdd= (e) => {
 
-            e.prevent.default()
+            e.preventDefault()
 
             const data = {
                 name,
                 desc,
-                priority: priority
+                priority
+
+                
             }
+
+        
+            setTasks([...tasks, data])
+
+                setNom('')
+                setDesc('')
+                setPriority('normal')
+
         }
 
 
+        
+        
 
+            
+       
+          
   return (
 
 
@@ -63,18 +81,23 @@ function Todolist(props) {
                 <div>
                     <label htmlFor="">Priorité  </label>
                     <select name="" value={priority} id="" onChange={handleSelect}>
-                        <option value="">Urgent</option>
-                        <option value="">Normal</option>
-                        <option value="">Basse</option>
-                    </select>
+                        <option value="high">Urgent</option>
+                        <option value="normal">Normal</option>
+                        <option value="low">Basse</option>
+                    </select> 
 
                 </div>
 
                 <button type="submit">Ajouter</button>
    
+     
+
             </form>
         </div>
 
+        <div>
+    <Tasklist tasks={tasks}/>
+</div>
 
     </div>
 
@@ -86,6 +109,13 @@ function Todolist(props) {
 
 
 
+// Todolist.defaultProps = {
+//     onNewTask : () => {}
+// }
+
+// Todolist.propTypes = {
+//     onNewTask : PropTypes.func
+// }
 
 
-export default Todolist
+export default Todoform

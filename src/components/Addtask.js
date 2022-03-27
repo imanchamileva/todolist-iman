@@ -1,15 +1,32 @@
 import React from 'react'
 import style from "./todolist.css"
+import Todolist from "./Todoform"
+import {useState} from "react"
+import Tasklist from './Tasklist'
 
 
-function Ajoutertache() {
+function Addtask(props) {
+
+    const {name, desc,priority} = props
+
+    
 
 
-
+    
+ 
   return (
 
             <div className="divtaches">
                 <h2>Liste des tâches</h2>
+                {name}
+                {desc}
+                {priority}
+                
+                <div>
+            
+                </div>
+                
+            
 
                 <div className="tache1">
                     <h3>Acheter du café</h3>
@@ -33,4 +50,4 @@ function Ajoutertache() {
   )
 }
 
-export default Ajoutertache
+// export default Addtask
